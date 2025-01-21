@@ -92,6 +92,12 @@ fun Login(videoUri: Uri = Uri.parse("")) {
             R.drawable.plant,
             R.drawable.landscape,
             R.drawable.rpnickson,
+            R.drawable.pexels_1,
+            R.drawable.pexels_2,
+            R.drawable.pexels_3,
+            R.drawable.pexels_4,
+            R.drawable.pexels_5,
+            R.drawable.pexels_6,
         )
 
         val listState = rememberLazyListState()
@@ -110,8 +116,8 @@ fun Login(videoUri: Uri = Uri.parse("")) {
                 listState.animateScrollToItem(
                     targetIndex
                 )*/
-                delay(5) // Approximately 60 frames per second for smooth scrolling
-                listState.scrollBy(6f)
+                delay(2) // Approximately 60 frames per second for smooth scrolling
+                listState.scrollBy(10f)
             }
         }
 
