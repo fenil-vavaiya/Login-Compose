@@ -6,6 +6,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.scrollBy
 import androidx.compose.foundation.layout.Box
@@ -105,21 +106,23 @@ fun Login(videoUri: Uri = Uri.parse("")) {
         val infiniteImages =
             remember { images + images + images + images + images + images + images + images + images + images + images }  // List repeated several times
 
+        /*delay(1600)
+
+                               val targetIndex = (listState.firstVisibleItemIndex + 1) % infiniteImages.size
+                               listState.scrollBy(2f) // Adjust the value (50f) to control the smoothness of the animation
+
+                               listState.animateScrollToItem(
+                                   targetIndex
+                               )*/
+
 
         LaunchedEffect(Unit) {
-            while (true) {
-                /*delay(1600)
-
-                val targetIndex = (listState.firstVisibleItemIndex + 1) % infiniteImages.size
-                listState.scrollBy(2f) // Adjust the value (50f) to control the smoothness of the animation
-
-                listState.animateScrollToItem(
-                    targetIndex
-                )*/
-                delay(2) // Approximately 60 frames per second for smooth scrolling
-                listState.scrollBy(10f)
+            val ticker = kotlinx.coroutines.channels.ticker(delayMillis = 16) // ~60 FPS
+            for (tick in ticker) {
+                listState.scrollBy(2f) // Smoothly scroll by a small value
             }
         }
+
 
 
 
@@ -144,10 +147,12 @@ fun Login(videoUri: Uri = Uri.parse("")) {
         }
 
 
-
-
-
-
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color.Transparent) // Fully transparent
+                .pointerInput(Unit) { /* Consume all touch events */ }
+        )
 
 
 
