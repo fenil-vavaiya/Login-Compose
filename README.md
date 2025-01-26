@@ -18,18 +18,10 @@ This project demonstrates a **Login Screen with Glassmorphism Effect** designed 
 
 ### Login Screens
 Below are snapshots of the Glassmorphism Login Screen with scrolling background images:
-<img src="app/src/main/assets/img.png" alt="Login Screen 1" width="300"><img src="app/src/main/assets/img_1.png" alt="Login Screen 2" width="300"><img src="app/src/main/assets/img_2.png" alt="Login Screen 2" width="300">
 
----
-
-## 🎥 Demo Video
-
-Watch the project in action in this demo video:
-
-<div align="center">
-  <video src="app/src/main/assets/demo.mp4" controls="controls" style="max-width: 100%; height: auto;">
-  </video>
-</div>
+| Screenshot 1 | Screenshot 2 | Screenshot 3 |
+|---|---|---|
+|<img src="app/src/main/assets/img.png" alt="Login Screen 1" width="300">|<img src="app/src/main/assets/img_1.png" alt="Login Screen 2" width="300">|<img src="app/src/main/assets/img_2.png" alt="Login Screen 2" width="300">|
 
 ---
 
